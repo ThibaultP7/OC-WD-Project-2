@@ -1,0 +1,55 @@
+:root {
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+}
+
+header {
+
+}
+
+nav {
+
+}
+
+main {
+
+}
+
+a {
+
+}
+
+ul {
+
+}
+
+ul li {
+
+}
+
+.container {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+    
+}
