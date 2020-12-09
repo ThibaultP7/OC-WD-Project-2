@@ -1,5 +1,9 @@
 :root {
+    --primary: #9356DC;
+    --secondary: #FF79DA;
+    --tertiary: #99E2D0;
 
+    --box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.2);
 }
 
 * {
@@ -17,7 +21,10 @@ body {
 }
 
 header {
-
+    font-family: 'Shrikhand', cursive;
+    padding-top: 20px;
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
 }
 
 nav {
@@ -41,15 +48,41 @@ ul li {
 }
 
 .container {
+    width: 100%;
 
 }
 
+/* -----GENERAL CLASSES-----*/
+
+.t-center {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* -----RESPONSIVE----- */
+
 /* Large devices (desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-
+    .container {
+        width: 992px;
+        margin: auto;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
-    
+    .container {
+        width: 1200px;
+    }
 }
