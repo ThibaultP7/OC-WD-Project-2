@@ -6,7 +6,7 @@
     <title>Oh My Food</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/da7bc48d54.js" crossorigin="anonymous"></script>
     <!--<link rel="icon" href="images/logo/...">-->
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1" />
@@ -15,14 +15,34 @@
 </head>
 
 <body>
-    <header>
+    <header class="d-flex justify-content-center align-items-center">
         <div class="container t-center">
             <img src="images/logo/ohmyfood@2x.svg" alt="logo.svg">
         </div>
     </header>
     <main>
-        <section>
-            
+        <section id="localisation" class="container d-flex justify-content-center bg-grey" >
+            <span class="d-flex align-items-center"><i class="fas fa-map-marker-alt mr-1"></i>Paris, Belleville</span>
+        </section>
+        <section id="landing" class="bg-lightgrey t-center p-2">
+            <h1 class="mb-1">Réservez le menu qui vous convient</h1>
+            <h2 class="mb-2">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h2>
+            <button type="button" name="button" class="call-to-action mb-1 pl-1 pr-1">Explorer nos restaurants</button>
+        </section>
+        <section id="manual" class="pt-2 pl-1 pr-1">
+            <h1 class="mb-1">Fonctionnement</h1>
+            <span class="step">
+                <span class="step-number">1</span>
+                <i class="step-icon fas fa-mobile-alt ml-1 mr-1"></i>Choisissez un restaurant
+            </span>
+            <span class="step">
+                <span class="step-number">2</span>
+                <i class="step-icon fas fa-bars ml-1 mr-1"></i>Composez votre menu
+            </span>
+            <span class="step-alt">
+                <span class="step-number">3</span>
+                <i class="step-icon fas fa-store primary ml-1 mr-1"></i>Dégustez au restaurant
+            </span>
         </section>
     </main>
     <footer>
