@@ -1,0 +1,27 @@
+/* -----GENERAL CLASSES-----*/
+
+.t-center {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+@for $i from 1 through 4 {
+    .m-#{$i} {
+        margin:($i * 1rem);
+    }
+
+    .p-#{$i} {
+        padding:($i * 1rem);
+    }
+}
