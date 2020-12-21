@@ -19,6 +19,8 @@ $regular-font: 'Roboto', sans-serif;
 
 $header-height: 65px;
 
+$return-btn-size: 20px;
+
 $box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
 
 html {
@@ -38,7 +40,19 @@ header {
     -webkit-box-shadow: $box-shadow;
     box-shadow: $box-shadow;
     background: $bg-white;
-    z-index: 10;
+    z-index: 100;
+
+    .return {
+        position: absolute;
+        top: calc(#{$header-height}/2 - #{$return-btn-size}/2);
+        left: 26px;
+        z-index: 110;
+
+        .return-button {
+            font-size: $return-btn-size;
+            color: #000;
+        }
+    }
 }
 
 main {
@@ -49,10 +63,16 @@ footer {
     color: #FFF;
     background: $bg-footer;
     font-size: 0.9rem;
+
+    ul li {
+        padding: 4px 0;
+    }
 }
 
 .container {
     width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 h1 {
@@ -67,6 +87,30 @@ h2 {
 
 .brand {
     font-family: $titles-font;
+    font-size: 1.2rem;
+}
+
+.card {
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+
+    h3 {
+        font-weight: bold;
+    }
+
+    h4 {
+        padding-top: 0.3rem;
+        text-overflow: ellipsis;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+    }
+    .card-content {
+        padding: 1rem;
+    }
 }
 
 #localisation {
@@ -124,8 +168,32 @@ h2 {
 }
 
 #menu {
-    h1, h2, h3, h4, h4, h5 {
+    background: $bg-lightgrey;
+    h1 {
         font-family: $titles-font;
+    }
+    h2 {
+        text-transform: uppercase;
+    }
+    .card {
+        margin-bottom: 1rem;
+        .card-content {
+            display: flex;
+            flex-direction: row;
+            background: $bg-white;
+        }
+    }
+    .price {
+        font-weight: bold;
+    }
+    .call-to-action {
+        height: 46px;
+        background: $bg-call-to-action;
+        border: 0;
+        border-radius: 30px;
+        color: #FFF;
+        font-weight: bold;
+        font-family: inherit;
     }
 }
 
@@ -133,8 +201,6 @@ h2 {
     background: $bg-lightgrey;
     .card {
         margin-bottom: 1rem;
-        border-radius: 16px;
-        overflow: hidden;
         display: flex;
         flex-direction: column;
         background: $bg-white;
@@ -144,13 +210,28 @@ h2 {
             height: 200px;
         }
 
-        h3 {
-            padding: 1rem 0 0 1rem;
-            font-weight: bold;
+        .new-restaurant {
+            position: absolute;
+            padding: 8px 12px;
+            top: 12px;
+            right: 12px;
+            border-radius: 2px;
+            font-size: 0.8rem;
+            color: darken($tertiary, 60);
+            background-color: $tertiary;
+            z-index: 10;
         }
 
-        h4 {
-            padding: 0.3rem 0 1rem 1rem;
+        .card-content {
+            position: relative;
+
+            .like {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: 1.5rem;
+                z-index: 10;
+            }
         }
     }
 }
