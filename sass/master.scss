@@ -23,6 +23,8 @@ $return-btn-size: 20px;
 
 $box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
 
+@import "libs/animations.scss";
+
 html {
     scroll-behavior: smooth;
 }
@@ -74,6 +76,12 @@ footer {
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
 }
 
 h1 {
@@ -168,8 +176,30 @@ h2 {
     }
 }
 
+#loading-spinner {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 120;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loading linear forwards;
+    animation-duration: 3s;
+    background-color: $bg-lightgrey;
+    i {
+        font-size: 3rem;
+        animation: spinner linear forwards;
+        animation-duration: 3s;
+    }
+}
+
 #menu {
     background: $bg-lightgrey;
+    border-radius: 30px 30px 0 0;
+    padding-top: 1rem;
+    position: relative;
+    top: -30px;
     h1 {
         font-family: $titles-font;
     }
@@ -188,6 +218,10 @@ h2 {
             width: 40px;
             background-color: $tertiary;
         }
+    }
+    .like {
+        margin-right: 1rem;
+        font-size: 1.3rem;
     }
     .card {
         margin-bottom: 1rem;
