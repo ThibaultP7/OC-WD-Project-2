@@ -244,7 +244,7 @@ td:not([align]), th:not([align]) {
     z-index: 2000;
   }
   100% {
-    z-index: -100;
+    z-index: -1000;
   }
 }
 @keyframes spinner {
@@ -256,9 +256,32 @@ td:not([align]), th:not([align]) {
     transform: rotate(180deg);
     color: #FF79DA;
   }
-  100% {
+  99% {
     transform: rotate(360deg);
     color: #99E2D0;
+  }
+  100% {
+    color: #0000;
+  }
+}
+@keyframes select_menu {
+  from {
+    width: 0px;
+    display: none;
+  }
+  to {
+    width: 100px;
+    display: inherit;
+  }
+}
+@keyframes dish_fade_in {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 100%;
   }
 }
 html {
@@ -421,6 +444,7 @@ h2 {
   padding-top: 1rem;
   position: relative;
   top: -30px;
+  margin-bottom: -30px;
 }
 #menu h1 {
   font-family: "Shrikhand", cursive;
@@ -447,14 +471,85 @@ h2 {
 }
 #menu .card {
   margin-bottom: 1rem;
+  animation: dish_fade_in 0.8s forwards;
+  opacity: 0;
 }
 #menu .card .card-content {
   display: flex;
   flex-direction: row;
   background: #FFFFFF;
 }
+#menu .card:hover ~ .menu-selection {
+  animation: select_menu;
+  display: inherit;
+}
+#menu .card:nth-child(1) {
+  animation-delay: 150ms;
+}
+#menu .card:nth-child(2) {
+  animation-delay: 300ms;
+}
+#menu .card:nth-child(3) {
+  animation-delay: 450ms;
+}
+#menu .card:nth-child(4) {
+  animation-delay: 600ms;
+}
+#menu .card:nth-child(5) {
+  animation-delay: 750ms;
+}
+#menu .card:nth-child(6) {
+  animation-delay: 900ms;
+}
+#menu .card:nth-child(7) {
+  animation-delay: 1050ms;
+}
+#menu .card:nth-child(8) {
+  animation-delay: 1200ms;
+}
+#menu .card:nth-child(9) {
+  animation-delay: 1350ms;
+}
+#menu .card:nth-child(10) {
+  animation-delay: 1500ms;
+}
+#menu .card:nth-child(11) {
+  animation-delay: 1650ms;
+}
+#menu .card:nth-child(12) {
+  animation-delay: 1800ms;
+}
+#menu .card:nth-child(13) {
+  animation-delay: 1950ms;
+}
+#menu .card:nth-child(14) {
+  animation-delay: 2100ms;
+}
+#menu .card:nth-child(15) {
+  animation-delay: 2250ms;
+}
+#menu .card:nth-child(16) {
+  animation-delay: 2400ms;
+}
+#menu .card:nth-child(17) {
+  animation-delay: 2550ms;
+}
+#menu .card:nth-child(18) {
+  animation-delay: 2700ms;
+}
+#menu .card:nth-child(19) {
+  animation-delay: 2850ms;
+}
+#menu .card:nth-child(20) {
+  animation-delay: 3000ms;
+}
 #menu .price {
   font-weight: bold;
+}
+#menu .menu-selection {
+  display: none;
+  width: 0px;
+  background-color: #99E2D0;
 }
 #menu .call-to-action {
   height: 46px;

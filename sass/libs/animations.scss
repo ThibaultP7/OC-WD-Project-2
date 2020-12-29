@@ -6,7 +6,7 @@
         z-index: 2000;
     }
     100% {
-        z-index: -100;
+        z-index: -1000;
     }
 }
 
@@ -19,8 +19,35 @@
         transform: rotate(180deg);
         color: $secondary;
     }
-    100% {
+    99% {
         transform: rotate(360deg);
         color: $tertiary;
+    }
+    100% {
+        color: #0000;
+    }
+}
+
+@keyframes select_menu {
+    from {
+        width: 0px;
+        display: none;
+    }
+
+    to {
+        width: 100px;
+        display: inherit;
+    }
+}
+
+@keyframes dish_fade_in {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 100%;
     }
 }

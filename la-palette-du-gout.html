@@ -26,9 +26,6 @@
         </div>
     </header>
     <main>
-        <div id="loading-spinner">
-            <i class="fas fa-spinner"></i>
-        </div>
         <section>
             <div class="img-wrapper">
                 <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la-palette-du-gout.jpg">
@@ -48,7 +45,12 @@
                                 <h3>Fricassée d'escargot</h3>
                                 <h4>Au piment d'espelette</h4>
                             </div>
-                            <span class="price">25€</span>
+                            <div class="d-flex flex-row">
+                                <span class="price">25€</span>
+                                <div class="menu-selection d-flex justify-content-center align-items-center">
+                                    <span>O</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="card">
@@ -137,13 +139,15 @@
         </section>
     </main>
     <footer class="p-1">
-        <p class="brand mb-1">ohmyfood</p>
-        <ul>
-            <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
-            <li><i class="fas fa-hands-helping"></i> Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
-        </ul>
+        <div class="container">
+            <p class="brand mb-1">ohmyfood</p>
+            <ul>
+                <li><i class="fas fa-utensils"></i> Proposer un restaurant</li>
+                <li><i class="fas fa-hands-helping"></i> Devenir partenaire</li>
+                <li>Mentions légales</li>
+                <li>Contact</li>
+            </ul>
+        </div>
     </footer>
 </body>
 

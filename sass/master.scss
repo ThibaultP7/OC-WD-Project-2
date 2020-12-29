@@ -32,7 +32,6 @@ html {
 body {
     font-size: 16px;
     font-family: $regular-font;
-
     overflow-x: hidden !important;
 }
 
@@ -200,6 +199,7 @@ h2 {
     padding-top: 1rem;
     position: relative;
     top: -30px;
+    margin-bottom: -30px;
     h1 {
         font-family: $titles-font;
     }
@@ -225,14 +225,30 @@ h2 {
     }
     .card {
         margin-bottom: 1rem;
+        animation: dish_fade_in 0.8s forwards;
+        opacity: 0;
         .card-content {
             display: flex;
             flex-direction: row;
             background: $bg-white;
         }
+        &:hover ~ .menu-selection {
+            animation: select_menu;
+            display: inherit;
+        }
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                animation-delay: (150ms * $i);
+            }
+        }
     }
     .price {
         font-weight: bold;
+    }
+    .menu-selection {
+        display: none;
+        width: 0px;
+        background-color: $tertiary;
     }
     .call-to-action {
         height: 46px;
