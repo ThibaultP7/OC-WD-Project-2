@@ -17,6 +17,7 @@ $bg-white: #FFFFFF;
 $bg-grey: #EAEAEA;
 $bg-lightgrey: #F6F6F6;
 $bg-call-to-action: linear-gradient($secondary, $primary);
+$bg-call-to-action-hover: linear-gradient(lighten($secondary, 5%), lighten($primary, 5%));
 $bg-footer: #353535;
 
 $titles-font: 'Shrikhand', cursive;
@@ -140,6 +141,9 @@ h2 {
         color: #FFF;
         font-weight: bold;
         font-family: inherit;
+        &:hover {
+            background: $bg-call-to-action-hover;
+        }
     }
 }
 

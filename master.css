@@ -400,6 +400,9 @@ h2 {
   font-weight: bold;
   font-family: inherit;
 }
+#landing .call-to-action:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+}
 
 #manual .step, #manual .step-alt {
   margin-bottom: 1.5rem;
