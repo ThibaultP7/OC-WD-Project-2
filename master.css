@@ -60,8 +60,16 @@ td:not([align]), th:not([align]) {
   flex-direction: row;
 }
 
+.flex-row-desktop {
+  flex-direction: column;
+}
+
 .flex-column {
   flex-direction: column;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
 }
 
 .justify-content-center {
@@ -74,6 +82,10 @@ td:not([align]), th:not([align]) {
 
 .align-items-center {
   align-items: center;
+}
+
+.w-50-lg {
+  width: 100%;
 }
 
 .m-1 {
@@ -596,6 +608,27 @@ h2 {
   z-index: 10;
 }
 
+.like .fas {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+}
+
+.like .far {
+  position: absolute;
+  right: 0;
+}
+
+.like .fas:hover,
+.like .fas:hover:before {
+  opacity: 100;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial;
+  /* reset Font Awesome's display:inline-block */
+}
+
 .img-wrapper img {
   height: auto;
   max-height: 100%;
@@ -613,16 +646,16 @@ h2 {
 }
 
 /* Large devices (desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 576px) {
   .container {
-    width: 992px;
+    width: 576px;
     margin: auto;
   }
 }
 /* Extra large devices (large desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 576px) {
   .container {
-    width: 1200px;
+    width: 576px;
   }
 }
 

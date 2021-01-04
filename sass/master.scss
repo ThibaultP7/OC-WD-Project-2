@@ -1,3 +1,8 @@
+$small: 576px;
+$medium: 576px;
+$large: 576px;
+$xlarge: 576px;
+
 @import "libs/reset.scss";
 @import "libs/mixins.scss";
 @import "libs/general.scss";
@@ -298,6 +303,25 @@ h2 {
             }
         }
     }
+}
+
+.like .fas {
+    position: absolute;
+    right: 0;
+    opacity: 0;
+}
+.like .far {
+    position: absolute;
+    right: 0;
+}
+
+.like .fas:hover,
+.like .fas:hover:before {
+    opacity: 100;
+    background: -webkit-gradient(linear, left top, left bottom, from($primary), to($secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial; /* reset Font Awesome's display:inline-block */
 }
 
 .img-wrapper img{
