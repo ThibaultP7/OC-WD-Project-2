@@ -334,25 +334,23 @@ h2 {
     right: 20px;
     font-size: 1.5rem;
     z-index: 10;
-}
-
-.like .fas {
-    position: absolute;
-    right: 0;
-    opacity: 0;
-    background: -webkit-gradient(linear, left top, left bottom, from($primary), to($secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    display: initial; /* reset Font Awesome's display:inline-block */
-}
-.like .far {
-    position: absolute;
-    right: 0;
-}
-
-.like .fas:hover,
-.like .fas:hover:before {
-    animation: like_animation 0.3s forwards;
+    .far {
+        position: absolute;
+        right: 0;
+    }
+    .fas {
+        position: absolute;
+        right: 0;
+        opacity: 0;
+        background: -webkit-gradient(linear, left top, left bottom, from($primary), to($secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: initial; /* reset Font Awesome's display:inline-block */
+        &:hover,
+        &:hover:before {
+            animation: like_animation 0.3s forwards;
+        }
+    }
 }
 
 .img-wrapper img{

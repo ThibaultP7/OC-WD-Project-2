@@ -652,7 +652,10 @@ h2 {
   font-size: 1.5rem;
   z-index: 10;
 }
-
+.like .far {
+  position: absolute;
+  right: 0;
+}
 .like .fas {
   position: absolute;
   right: 0;
@@ -663,14 +666,7 @@ h2 {
   display: initial;
   /* reset Font Awesome's display:inline-block */
 }
-
-.like .far {
-  position: absolute;
-  right: 0;
-}
-
-.like .fas:hover,
-.like .fas:hover:before {
+.like .fas:hover, .like .fas:hover:before {
   animation: like_animation 0.3s forwards;
 }
 
