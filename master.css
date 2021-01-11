@@ -88,6 +88,10 @@ td:not([align]), th:not([align]) {
   width: 100%;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .m-1 {
   margin: 1rem;
 }
@@ -276,14 +280,30 @@ td:not([align]), th:not([align]) {
     color: #0000;
   }
 }
+@keyframes like_animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
 @keyframes select_menu {
   from {
     width: 0px;
     display: none;
   }
   to {
-    width: 100px;
+    width: 70px;
     display: inherit;
+  }
+}
+@keyframes rotate_circle {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 @keyframes dish_fade_in {
@@ -391,19 +411,6 @@ h2 {
   background: #EAEAEA;
 }
 
-#landing .call-to-action {
-  height: 46px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border: 0;
-  border-radius: 30px;
-  color: #FFF;
-  font-weight: bold;
-  font-family: inherit;
-}
-#landing .call-to-action:hover {
-  background: linear-gradient(#ff93e1, #a16be0);
-}
-
 #manual .step, #manual .step-alt {
   margin-bottom: 1.5rem;
   width: 100%;
@@ -480,10 +487,6 @@ h2 {
   width: 40px;
   background-color: #99E2D0;
 }
-#menu .like {
-  margin-right: 1rem;
-  font-size: 1.3rem;
-}
 #menu .card {
   margin-bottom: 1rem;
   animation: dish_fade_in 0.8s forwards;
@@ -491,12 +494,42 @@ h2 {
 }
 #menu .card .card-content {
   display: flex;
+  padding: 0;
   flex-direction: row;
   background: #FFFFFF;
 }
-#menu .card:hover ~ .menu-selection {
-  animation: select_menu;
+#menu .card .card-content .card-food {
+  padding: 1rem;
+  width: 100%;
+  flex-shrink: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#menu .card .card-content .card-food h3, #menu .card .card-content .card-food h4 {
+  display: block;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#menu .card .card-content .price {
+  align-items: flex-end;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+#menu .card .menu-selection {
+  flex-grow: 1;
+  font-size: 2rem;
+  color: #fff;
+  display: none;
+}
+#menu .card:hover .menu-selection {
+  animation: select_menu 1s forwards;
   display: inherit;
+}
+#menu .card:hover .menu-selection .fa-check-circle {
+  animation: rotate_circle 1s forwards;
 }
 #menu .card:nth-child(1) {
   animation-delay: 150ms;
@@ -566,15 +599,6 @@ h2 {
   width: 0px;
   background-color: #99E2D0;
 }
-#menu .call-to-action {
-  height: 46px;
-  background: linear-gradient(#FF79DA, #9356DC);
-  border: 0;
-  border-radius: 30px;
-  color: #FFF;
-  font-weight: bold;
-  font-family: inherit;
-}
 
 #restaurants {
   background: #F6F6F6;
@@ -603,7 +627,30 @@ h2 {
 #restaurants .card .card-content {
   position: relative;
 }
-#restaurants .card .card-content .like {
+
+.call-to-action {
+  height: 46px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: 0;
+  border-radius: 30px;
+  color: #FFF;
+  font-weight: bold;
+  font-family: inherit;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+.call-to-action:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+
+.like {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+}
+
+.like {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -615,6 +662,11 @@ h2 {
   position: absolute;
   right: 0;
   opacity: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: initial;
+  /* reset Font Awesome's display:inline-block */
 }
 
 .like .far {
@@ -624,12 +676,7 @@ h2 {
 
 .like .fas:hover,
 .like .fas:hover:before {
-  opacity: 100;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: initial;
-  /* reset Font Awesome's display:inline-block */
+  animation: like_animation 0.3s forwards;
 }
 
 .img-wrapper img {

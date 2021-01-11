@@ -28,6 +28,15 @@
     }
 }
 
+@keyframes like_animation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
 @keyframes select_menu {
     from {
         width: 0px;
@@ -35,8 +44,17 @@
     }
 
     to {
-        width: 100px;
+        width: 70px;
         display: inherit;
+    }
+}
+
+@keyframes rotate_circle {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
 
